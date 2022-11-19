@@ -1,0 +1,46 @@
+.address {
+    margin-top: 20px;
+}
+
+.address__box {
+    @include desktop-down {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+}
+
+.address__link {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    @include transition(color);
+
+    &--map {
+        color: $color-text-button;
+    }
+
+    &--contact {
+        color: $color-footer-input;
+    }
+
+    &:hover,
+    &:focus {
+        color: $color-text-accent;
+    }
+}
+
+.address__item {
+    text-align: center;
+
+    @include desktop {
+        text-align: left;
+    }
+
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}

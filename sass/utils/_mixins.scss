@@ -1,0 +1,33 @@
+@mixin transition($property) {
+    transition: $property 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin tablet-down {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin desktop-down {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}

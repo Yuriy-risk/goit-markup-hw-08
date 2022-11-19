@@ -1,0 +1,94 @@
+.registration {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration__text {
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $color-text-title;
+}
+
+.registration__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.registration__item {
+    position: relative;
+}
+
+.registration__input {
+    width: 100%;
+    padding: 11px 12px 11px 43px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: $color-text-primary;
+    outline: none;
+    @include transition(border-color);
+
+    &:focus {
+        border-color: $color-text-accent;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 1.167;
+        letter-spacing: 0.01em;
+        color: $color-text-placeholder;
+    }
+}
+
+.registration__label {
+    position: absolute;
+    top: 50%;
+    left: 43px;
+    transform: translateY(-50%);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    color: $color-text-primary;
+    @include transition(transform);
+
+    .registration__input:focus+&,
+    .registration__input:not(:placeholder-shown)+& {
+        transform: translate(-43px, -36px);
+    }
+}
+
+.registration__icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    fill: $color-text-title;
+
+    .registration__input:focus~& {
+        fill: $color-text-accent;
+    }
+}
+
+.registration__button {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 52px;
+    max-width: 200px;
+
+    &:hover,
+    &:focus {
+        background-color: $color-hover-button;
+    }
+}

@@ -1,0 +1,35 @@
+.social {
+    display: flex;
+    justify-content: center;
+    margin-right: -10px;
+}
+
+.social__item {
+    margin-right: 10px;
+}
+
+.social__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $color-icon;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    transition: background-color $cubic,
+        fill $cubic;
+
+    &--background {
+        background-color: $color-background-social;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color-text-accent;
+        fill: $color-text-button;
+    }
+}
+
+.social__icon {
+    fill: $color-text-button;
+}

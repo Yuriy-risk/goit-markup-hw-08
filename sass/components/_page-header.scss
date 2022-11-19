@@ -1,0 +1,14 @@
+.page-header {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid $color-border-header;
+}
+
+.page-header__box {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        height: 60px;
+    }
+}

@@ -1,0 +1,115 @@
+.menu__toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 40px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    fill: $color-logo-dark;
+
+    &:hover,
+    &:focus {
+        fill: $color-text-accent;
+    }
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    background-color: $color-text-button;
+    z-index: 999;
+    transform: translateX(100%);
+    @include transition(transform);
+
+    @include tablet {
+        display: none;
+    }
+}
+
+.menu.is-open {
+    display: block;
+    transform: translateX(0);
+}
+
+.js-close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mobile-menu__list {
+    margin-bottom: auto;
+}
+
+.mobile-menu__link {
+    display: flex;
+    margin-bottom: 32px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.176;
+    letter-spacing: 0.02em;
+    color: $color-text-accent;
+    text-decoration: none;
+
+    @include mobile {
+        font-size: 34px;
+    }
+}
+
+.social-mobile {
+    display: flex;
+    gap: 20px;
+    margin-top: 64px;
+}
+
+.social-mobile__item {
+
+    position: relative;
+}
+
+.social-mobile__link {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $color-text-accent;
+    text-decoration: none;
+
+    @include mobile {
+        font-size: 18px;
+    }
+
+}
+
+.social-mobile__item:not(:last-child)::after {
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 0;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+}

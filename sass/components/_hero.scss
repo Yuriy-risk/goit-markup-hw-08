@@ -1,0 +1,118 @@
+.hero {
+    padding: 118px 0;
+    background-color: $color-background-hero;
+    text-align: center;
+
+    @include mobile {
+        max-width: 480px;
+    }
+
+    @include tablet {
+        max-width: 768px;
+    }
+
+    @include desktop {
+        padding: 200px 0;
+        max-width: 1600px;
+    }
+}
+
+.hero__title {
+    margin-bottom: 30px;
+    color: $color-text-button;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.615;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 auto 30px auto;
+
+    @include tablet {
+        width: 360px;
+    }
+
+    @include desktop {
+        width: 700px;
+        font-size: 44px;
+        line-height: 1.364;
+    }
+}
+
+.hero__button {
+    display: inline-block;
+    padding: 10px 24px;
+    min-width: 200px;
+    @include transition(background-color);
+
+    &:hover,
+    &:focus {
+        background-color: $color-hover-button;
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right,
+            $gradient-background-hero,
+            $gradient-background-hero ),
+        url('../images/hero-480.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .overlay {
+        background-image: linear-gradient(to right,
+                $gradient-background-hero,
+                $gradient-background-hero ),
+            url('../images/hero-480@2x.jpg');
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .overlay {
+        background-image: linear-gradient(to right,
+                $gradient-background-hero,
+                $gradient-background-hero ),
+            url('../images/hero-768.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .overlay {
+            background-image: linear-gradient(to right,
+                    $gradient-background-hero,
+                    $gradient-background-hero ),
+                url('../images/hero-768@2x.jpg');
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .overlay {
+        background-image: linear-gradient(to right,
+                $gradient-background-hero,
+                $gradient-background-hero ),
+            url('../images/hero-1200.jpg');
+        // max-width: 1600px;
+        height: 600px;
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .overlay {
+            background-image: linear-gradient(to right,
+                    $gradient-background-hero,
+                    $gradient-background-hero ),
+                url('../images/hero-1200@2x.jpg');
+        }
+    }
+}

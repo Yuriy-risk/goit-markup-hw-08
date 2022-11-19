@@ -1,0 +1,39 @@
+.activity-section {
+    padding-top: 0;
+
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
+.activity {
+    display: flex;
+    margin-right: -30px;
+}
+
+.activity__item {
+    position: relative;
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+}
+
+.activity__overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 27px 0;
+    background-image: linear-gradient(to right, $gradient-background-activity, $gradient-background-activity);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.activity__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-text-button;
+}
